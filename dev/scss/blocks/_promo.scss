@@ -1,0 +1,90 @@
+.banner{
+    background: url(../img/promo/woman.jpg) center/cover no-repeat;
+    &__inner{
+        padding: 210px 0 40px;
+        min-height: 775px;
+    }
+    &__wrapper{
+        max-width: 60%;
+    }
+    &__title{
+        margin-bottom: 15px;
+    }
+    &__subtitle{
+        margin-bottom: 30px;
+    }
+    &__btn{
+        margin-top: 43px;
+    }
+    &__list{
+        margin-top: 50px;
+    }
+    &__item{
+        display: flex;
+        align-items: flex-start;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    &__img{
+        margin-right: 26px;
+        width: 44px;
+        height: 44px;
+        img{
+            width: 100%;
+        }
+    }
+
+/*     @media (max-width: 1199px){
+        min-height: 720px;
+    } */
+    @media (max-width: 992px){
+        &__inner{
+            min-height: auto;
+        }
+        &__wrapper{
+            max-width: 70%;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &__btn{
+            margin-top: 15px;
+        }
+        &__img{
+            margin-right: 15px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    @media (max-width: 768px){
+        &__inner{
+            padding: 180px 0 40px;
+        }  
+        &__wrapper{
+            min-height: 400px;
+        }   
+    }
+    @media (max-width: 576px){
+        &__wrapper{
+            min-height: 400px;
+        }
+        &__list{
+            margin-top: 220px;
+        }
+        &__item{
+            font-size: 15px;
+        }
+        &__btn{
+            max-width: 208px;
+            font-size: 18px;
+        }
+    }
+    @media (max-width: 480px){
+        &__wrapper{
+            max-width: 90%;
+            min-height: 340px;
+        }
+    }
+}

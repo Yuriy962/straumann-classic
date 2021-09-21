@@ -1,0 +1,83 @@
+.contacts{
+    position: relative;
+    &__inner{
+        min-height: 500px;
+    }
+    &__info{
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        z-index: 1;
+        background-color: $pink;
+        min-width: 308px;
+        max-height: 233px;
+    }
+    &__heading{
+        background-color: #000;
+        padding: 20px 30px;
+    }
+    &__content{
+        padding: 25px 30px 30px;
+    }
+    &__link{
+        display: block;
+        color: #000;
+        &:hover{
+            color: #fff;
+        }
+    }
+    &__phone{
+        font-size: 21px;
+    }
+    &__text{
+        font-size: 18px;
+    }
+    &__phone,
+    &__text{
+        margin-bottom: 18px;
+    }
+    address{
+        margin-bottom: 0;
+        color: #000;
+    }
+    @media (max-width: 576px){
+        &__info{
+            right: 0;
+            bottom: -1px;
+            min-height: auto;
+            min-width: auto;
+            width: 228px;
+            margin: 0 auto;
+        }
+        &__heading{
+            background-color: #000;
+            padding: 15px 20px;
+        }
+        &__content{
+            padding: 15px 20px;
+        }
+        &__phone{
+            font-size: 19px;
+        }
+        &__text{
+            font-size: 16px;
+        }
+        &__phone,
+        &__text{
+            margin-bottom: 15px;
+        }
+    }
+}
+
+#YaMaps{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.ymaps-2-1-79-ground-pane {
+    filter: grayscale(100%)
+}

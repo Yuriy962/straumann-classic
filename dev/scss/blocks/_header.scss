@@ -1,0 +1,89 @@
+.header{
+    color: $text-color;
+    position: relative;
+    a{
+        color: $text-color;
+    }
+    &__phone{
+        a{
+            &:hover{
+                color: $pink;
+            }
+        }
+    }
+    &__inner{
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        background-color: transparent;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+        transition: background-color 0.3s;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        max-height: 92px;
+    }
+    &__content{
+        max-width: 60%;
+        width: 100%;
+    }
+    &__logo{
+        max-width: 406px;
+    }
+    &__text{
+        font-size: 1rem;
+    }
+    &__phone{
+        font-size: 1.64rem;
+        font-weight: 600;
+    }
+    @media (max-width: 1200px){
+        &__text{
+            display: none;
+        }
+        &__inner{
+            height: 92px;
+        }
+    }
+    @media (max-width: 991px){
+        &__inner{
+            padding: 15px 0;
+            background-color: #fff;
+        }
+        &__content{
+            max-width: 100%;
+            background-color: #fff;
+            padding: 11px 20px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -50px;
+            border-bottom: 2px solid rgba(232, 232, 232, 0.7);
+        }
+        &__wrapper{
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        &__phone{
+            font-size: 23px;
+            a:hover{
+                color: #fff;
+            }
+        }
+        &__text{
+            color: #fff;
+        }
+    }
+    @media (max-width: 576px){
+        &__wrapper{
+            max-width: 100%;
+        }
+    }
+}

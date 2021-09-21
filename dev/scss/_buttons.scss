@@ -1,0 +1,17 @@
+.btn{
+   background-color: $pink;
+   color: #fff;
+   min-width: 190px;
+   max-width: 324px;
+   height: 65px;
+   font-size: 19px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   border: transparent;
+   padding: 15px 43px;
+   border-radius: 10px;
+   &:hover{
+       background-color: $pink--hover;
+   }
+}
