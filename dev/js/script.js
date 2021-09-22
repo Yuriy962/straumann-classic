@@ -18,7 +18,8 @@ $(window).on('load', () => {
     });
 
     const menu = document.querySelector('.menu'),
-    hamburger = document.querySelector('.hamburger');
+    hamburger = document.querySelector('.hamburger'),
+    menuItem = document.querySelectorAll('.menu__item');
     
 
     hamburger.addEventListener('click', () => {

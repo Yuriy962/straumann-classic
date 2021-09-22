@@ -61,10 +61,15 @@ input{
 
 /*end fancybox*/
 @import "buttons";
+@import "mixins";
 @import "../../node_modules/slick-carousel/slick/slick.scss";
 @import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox';
 @import 'blocks/header';
 @import 'blocks/promo';
+@import 'blocks/adv';
+@import 'blocks/price';
+@import 'blocks/teeth';
+@import 'blocks/process';
 
 @import 'blocks/contacts';
 
@@ -207,7 +212,6 @@ input{
 		}
 	}
 	span{
-		display: block;
 		color: $pink;
 	}
 	&--small{
@@ -577,3 +581,21 @@ input{
 	}
 }
 
+@media (max-width: 1400px){
+	.overflow-x{
+		overflow-x: auto;
+	}
+}
+
+.bg{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 0;
+	&--pink{
+		background: linear-gradient(267.13deg,#da6096 -2.3%,#ca5f8e -2.29%,#b44475 94.41%),url(../img/process/process-bg.png) 50%/cover no-repeat;
+		opacity: 0.8;
+	}
+}

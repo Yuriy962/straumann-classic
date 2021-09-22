@@ -1,0 +1,26 @@
+.price{
+    @include list;
+    background-color: #fff;
+    &__inner{
+        padding: 40px 0;
+    }
+    &__item{
+        background-color: #EFEFF0;
+        padding: 10px;
+        &:hover{
+            box-shadow: 0 0 25px 25px rgba(227, 81, 145, 0.3);
+        }
+        @media (max-width: 992px){
+            &:hover{
+                box-shadow: none;
+            }
+        }
+    }
+    &__img{
+        position: relative;
+        border-radius: 10px;
+    }
+    &__text{
+        min-height: 75px;
+    }
+}

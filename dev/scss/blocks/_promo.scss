@@ -1,7 +1,7 @@
 .banner{
-    background: url(../img/promo/woman.jpg) center/cover no-repeat;
+    background: url(../img/promo/woman.jpg) center center/cover no-repeat;
     &__inner{
-        padding: 210px 0 40px;
+        padding: 150px 0 200px;
         min-height: 775px;
     }
     &__wrapper{
@@ -9,6 +9,9 @@
     }
     &__title{
         margin-bottom: 15px;
+        span{
+            display: block;
+        }
     }
     &__subtitle{
         margin-bottom: 30px;
@@ -18,12 +21,14 @@
     }
     &__list{
         margin-top: 50px;
+        overflow: hidden;
     }
     &__item{
         display: flex;
         align-items: flex-start;
         font-size: 18px;
         margin-bottom: 20px;
+        overflow: hidden;
     }
     &__img{
         margin-right: 26px;
@@ -31,19 +36,17 @@
         height: 44px;
         img{
             width: 100%;
+            object-fit: scale-down;
         }
     }
-
-/*     @media (max-width: 1199px){
-        min-height: 720px;
-    } */
     @media (max-width: 992px){
         &__inner{
-            min-height: auto;
+            min-height: 500px;
+            padding: 180px 0 80px;
         }
         &__wrapper{
             max-width: 70%;
-            min-height: 600px;
+            min-height: 300px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -53,25 +56,17 @@
         }
         &__img{
             margin-right: 15px;
-            img{
-                width: 100%;
-            }
         }
     }
     @media (max-width: 768px){
         &__inner{
             padding: 180px 0 40px;
-        }  
-        &__wrapper{
-            min-height: 400px;
-        }   
+        }    
     }
     @media (max-width: 576px){
-        &__wrapper{
-            min-height: 400px;
-        }
         &__list{
             margin-top: 220px;
+            min-height: 186px;
         }
         &__item{
             font-size: 15px;
@@ -85,6 +80,62 @@
         &__wrapper{
             max-width: 90%;
             min-height: 340px;
+        }
+    }
+}
+
+.infoblock{
+    position: relative;
+    top: -144px;
+    height: 0;
+    &__list{
+        max-width: 901px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 28px 30px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    &__item{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__img{
+        width: 54px;
+        height: 54px;
+        margin-right: 15px;
+        flex-shrink: 0;
+        img{
+            width: 100%;
+        }
+    }
+    &__text{
+        font-size: 18px;
+    }
+    @media (max-width: 991px){
+        height: auto;
+        top: 0;
+        padding: 45px 0 0px;
+        &__list{
+            flex-wrap: wrap;
+        }
+        &__item{
+            margin-bottom: 20px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    @media (max-width: 576px){
+        &__list{
+            padding: 20px 25px;
+        }
+        &__img{
+            width: 43px;
+            height: 43px;
+        }
+        &__text{
+            font-size: 15px;
         }
     }
 }
