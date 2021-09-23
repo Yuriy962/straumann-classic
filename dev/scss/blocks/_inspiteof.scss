@@ -1,0 +1,41 @@
+.inspiteof{
+    background: url('../img/inspiteof/people.jpg') center/cover no-repeat;
+    position: relative;
+    &__bg{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(196,196,196,0.3);
+    }
+    &__inner{
+        padding: 100px 0;
+    }
+    &__title{
+        margin-bottom: 50px;
+        span{
+            display: block;
+        }
+    }
+    &__descr{
+        font-size: 18px;
+    }
+
+    @media (max-width: 1300px){
+        &__bg{
+            background-color: rgba(196,196,196,0.5);
+        }
+    }
+    @media (max-width: 991px){
+        &__inner{
+            padding: 45px 0;
+        }
+        &__title{
+            margin-bottom: 30px;
+        }
+        &__descr{
+            font-size: 15px;
+        }
+    }
+}

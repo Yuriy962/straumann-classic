@@ -70,9 +70,10 @@ input{
 @import 'blocks/price';
 @import 'blocks/teeth';
 @import 'blocks/process';
-
+@import 'blocks/inspiteof';
+@import 'blocks/guarantee';
+@import 'blocks/certificates';
 @import 'blocks/contacts';
-
 @import 'blocks/footer';
 
 .menu{
@@ -118,7 +119,7 @@ input{
 		z-index: -1;
 		left: -100%;
 		right: 0;	
-		top: 123px;
+		top: 100px;
 		bottom: -80px;
 		width: 100%;
 		height: 100vh;
@@ -215,12 +216,33 @@ input{
 		color: $pink;
 	}
 	&--small{
+		font-size: 32px;
 		@media (max-width: 576px){
 			font-size: 21px;
 		}
 	}
+	&--inspiteof{
+		font-size: 48px;
+		@media (max-width: 1200px){
+			font-size: 40px;
+		}		
+		@media (max-width: 768px){
+			font-size: 30px;
+		}
+		@media (max-width: 576px){
+			font-size: 22px;
+		}
+	}
+	&--cert{
+		@media (max-width: 576px){
+			font-size: 22px;
+		}
+	}
 	&--contacts{
-		font-size: 28px;
+		font-size: 45px;
+		@media (max-width: 768px){
+			font-size: 30px;
+		}
 		@media (max-width: 576px){
 			font-size: 18px;
 		}
@@ -255,37 +277,24 @@ input{
     &-square{
         color: #000;
         list-style: square;
+		padding-left: 20px;
         &__item{
-            font-size: 18px;
-            margin: 18px 0;
+            font-size: 16px;
+            margin: 20px 0;
             &::marker{
+				font-size: 22px;
                 color: #fff;
             }
         }
-		&--green{
+		&--pink{
 			.list-square__item::marker{
-				color: #8FB91C;
-			}
-		}
-		&--underlined{
-			.list-square__item{
-				padding-bottom: 40px;
-				border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-				&:last-child{
-					border-bottom: 0;
-				}
-			}
-			@media (max-width: 768px){
-				.list-square__item{
-					padding-bottom: 25px;
-				}
+				color: $pink;
 			}
 		}
         @media (max-width: 992px){
-			padding-left: 15px;
             &__item{
                 font-size: 16px;
-                margin: 11px 0;
+                margin: 6px 0;
             }
         }
     }
@@ -344,39 +353,6 @@ input{
 			position: relative;
 			height: 188px;
 			bottom: -50px;
-		}
-	}
-}
-
-.block{
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	&--half{
-		width: 50%;
-	}
-	&--left{
-		left: 0;
-		right: auto;
-	}
-	&--right{
-		right: 0;
-		left: auto;
-	}
-	&--green{
-		background-color: $pink;
-	}
-	&--black{
-		background-color: #000;
-	}
-
-	&-mobile{
-		&--top{
-			width: 100%;
-			bottom: auto;
-			height: 50%;
 		}
 	}
 }

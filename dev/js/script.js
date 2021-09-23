@@ -55,7 +55,7 @@ $(window).on('load', () => {
         }
         formContent = 
         '<h2 class="title text-center form-popup__title"> Спасибо, наш менеджер свяжется с Вами в ближайшее время </h2>' + 
-            '<h3 class="subtitle text-center form-popup__subtitle '+ textWhite + ' ">А пока можете ознакомится с другими нашими услугами на сайте <a href="https://ortoprof.ru/" style="color: #8fb91c">ortoprof.ru</a> </h3>' + 
+            '<h3 class="subtitle text-center form-popup__subtitle '+ textWhite + ' ">А пока можете ознакомится с другими нашими услугами на сайте <a href="https://ortoprof.ru/" style="color: #e35191">ortoprof.ru</a> </h3>' + 
             '<div class="form__row form-popup__row">' +
             '<a class="btn form-popup__btn text-white" href="https://ortoprof.ru/" style="padding: 0">Перейти на сайт</a>' + 
         '</div>';
@@ -70,21 +70,21 @@ $(window).on('load', () => {
 });
 
 // Map
-// YaMapsShown = false; 
-// $(window).scroll(function() {
-//     if (!YaMapsShown){
-//         if($(window).scrollTop() + $(window).height() > $(document).height() - 702) {      
-//         showYaMaps();
-//         YaMapsShown = true;
-//         }
-//     }
-// });
-// function showYaMaps(){
-//     var script   = document.createElement("script");
-//     script.type  = "text/javascript";
-//     script.src   = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A32062da92eafd2a9f620ab4b66e0726df9b6520bcd7502c0ff743d1ad9434ff3&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true";
-//     document.getElementById("YaMaps").appendChild(script);
-// }
+YaMapsShown = false; 
+$(window).scroll(function() {
+    if (!YaMapsShown){
+        if($(window).scrollTop() + $(window).height() > $(document).height() - 702) {      
+        showYaMaps();
+        YaMapsShown = true;
+        }
+    }
+});
+function showYaMaps(){
+    var script   = document.createElement("script");
+    script.type  = "text/javascript";
+    script.src   = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acb08fec08110b844d57a8238a0ce4822c4dbd495deeab24779c019bc3e0907c1&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true";
+    document.getElementById("YaMaps").appendChild(script);
+}
 
 
 /* var greenBlock = window.getComputedStyle(document.querySelector('.longlife'), ':before').height;

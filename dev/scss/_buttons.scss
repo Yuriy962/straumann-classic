@@ -14,4 +14,9 @@
    &:hover{
        background-color: $pink--hover;
    }
+
+   @media (max-width: 480px){
+       padding: 15px 25px;
+       font-size: 18px;
+   }
 }
