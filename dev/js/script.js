@@ -45,22 +45,41 @@ $(window).on('load', () => {
 
 
     let formContent = '';
+    // Тест формы -- раскомментировать и юзать при необходимости
+    // $("form").on("submit", (function (e) {
+    //     e.preventDefault();
+    //     let form = $(this);
+    //     formContent = 
+    //     '<h2 class="title text-center form-popup__title"> Спасибо, наш менеджер свяжется с Вами в ближайшее время </h2>' + 
+    //         '<h3 class="subtitle text-center form-popup__subtitle">А пока можете ознакомится с другими нашими услугами на сайте <a href="https://ortoprof.ru/" style="color: #e35191">ortoprof.ru</a> </h3>' + 
+    //         '<div class="form__row form-popup__row">' +
+    //         '<a class="btn form-popup__btn text-white" href="https://ortoprof.ru/" style="padding: 0">Перейти на сайт</a>' + 
+    //     '</div>';
+    //     console.log('success');
+    //     form[0].innerHTML = formContent;
+    // }));
+
     // Отправка формы
     $("form").on("submit", (function (e) {
-        let textWhite = '';
         e.preventDefault();
         let form = $(this);
-        if(form[0].classList.contains('entry__form')){
-            textWhite = 'text-white';
-        }
-        formContent = 
-        '<h2 class="title text-center form-popup__title"> Спасибо, наш менеджер свяжется с Вами в ближайшее время </h2>' + 
-            '<h3 class="subtitle text-center form-popup__subtitle '+ textWhite + ' ">А пока можете ознакомится с другими нашими услугами на сайте <a href="https://ortoprof.ru/" style="color: #e35191">ortoprof.ru</a> </h3>' + 
-            '<div class="form__row form-popup__row">' +
-            '<a class="btn form-popup__btn text-white" href="https://ortoprof.ru/" style="padding: 0">Перейти на сайт</a>' + 
-        '</div>';
-        console.log('success');
-        form[0].innerHTML = formContent;
+        return $.ajax({
+            type: "POST",
+            url: "../send.php",
+            data: $(this).serialize(),
+            success: function (e) {
+                e = JSON.parse(e);
+                formContent = 
+                '<h2 class="title text-center form-popup__title"> Спасибо, наш менеджер свяжется с Вами в ближайшее время </h2>' + 
+                    '<h3 class="subtitle text-center form-popup__subtitle">А пока можете ознакомится с другими нашими услугами на сайте <a href="https://ortoprof.ru/" style="color: #e35191">ortoprof.ru</a> </h3>' + 
+                    '<div class="form__row form-popup__row">' +
+                    '<a class="btn form-popup__btn text-white" href="https://ortoprof.ru/" style="padding: 0">Перейти на сайт</a>' + 
+                '</div>';
+                console.log('success');
+                form[0].innerHTML = formContent;
+                form.find("input[type='name'], input[type='tel']").val(""), $("form").trigger("reset");
+            }
+        });
     }));
 
     $().fancybox();
