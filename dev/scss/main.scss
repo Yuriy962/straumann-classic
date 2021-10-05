@@ -38,12 +38,15 @@ body{
 }
 
 a{
+	transition: all .2s;
 	&:hover{
 		text-decoration: none;
 	}
 }
 button,
 input{
+	transition: border .2s,
+				outline .2s;
 	border: 2px solid;
 	border-radius: 10px;
 	&:focus{

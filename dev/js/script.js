@@ -6,11 +6,13 @@ $(window).on('load', () => {
     $(this).scroll(function () {
         if(window.pageYOffset > sticky){
             header.classList.add('position-fixed');
+            header.style.boxShadow = '0 0 30px 1px rgba(0, 0, 0, 0.3)';
             if($(window).width() > 992){
                 header.style.backgroundColor = '#fff';
             }
         }else{
             header.classList.remove('position-fixed');
+            header.style.boxShadow = 'none';
             if($(window).width() > 992){
                 header.style.backgroundColor = 'transparent';
             }

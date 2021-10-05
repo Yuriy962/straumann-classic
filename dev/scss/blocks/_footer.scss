@@ -1,6 +1,9 @@
 .footer{
     background-color: #474A54;
     min-height: 102px;
+    .policy:hover{
+        color: $pink;
+    }
     &__inner{
         padding: 30px 0;
     }
