@@ -107,7 +107,8 @@ function showYaMaps(){
     document.getElementById("YaMaps").appendChild(script);
 }
 
-
-/* var greenBlock = window.getComputedStyle(document.querySelector('.longlife'), ':before').height;
-
-console.log(greenBlock); */
+ $(window).on('load', function () {
+     $(document).on("click", '.form [type="submit"]', function(){
+         ym(85819950,'reachGoal','ORDERFORM');
+     });
+ });  
