@@ -67,7 +67,7 @@ $(window).on('load', () => {
         let form = $(this);
         return $.ajax({
             type: "POST",
-            url: "../send.php",
+            url: "send.php",
             data: $(this).serialize(),
             success: function (e) {
                 e = JSON.parse(e);
